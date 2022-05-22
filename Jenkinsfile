@@ -17,6 +17,11 @@ pipeline{
                 sh 'docker build -t kalpanashinde/springboot:latest .'
             }
         }
+        stage('Push Dockerimage'){
+            steps{
+                sh 'docker push kalpanashinde/springboot:latest'
+            }
+        }
         
     }
 }
